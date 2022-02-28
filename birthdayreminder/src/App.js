@@ -3,7 +3,7 @@ import './App.css';
 import  Data from "./Data"
 import  Header from "./Components/Header"
 import  Footer from "./Components/Footer"
-import  CardItem from "./Components/CardItem"
+import  CardItems from "./Components/CardItems"
 
 function App() {
 
@@ -12,19 +12,7 @@ function App() {
     <div className="App">
       <div ClassName="birthday__area">
       <Header    pepole={pepole}/>
-      {pepole.map(item =>{
-        return(
-          <div>
-          <CardItem 
-          id={item.id}
-          image={item.image}
-          name={item.name}
-          age={item.age}
-          />
-          </div>
-        )
-      })}
-
+      <CardItems  pepole={pepole}/>
       <Footer  setPepole={setPepole} />
       </div>
   
